@@ -17,7 +17,7 @@ var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 if ( username == "hieu" && password == "12345"){
 alert ("Login successfully");
-window.location = "success.html"; 
+window.location = "index.ejs"; 
 // Redirecting to other page.
 return false;
 }
