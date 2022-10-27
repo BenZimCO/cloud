@@ -3,19 +3,30 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="login.js"></script>
+    <script src="routes/login.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div class="container">
-        <div class="main">
-        <h2>Javascript Login Form Validation</h2>
-        <form id="form_id" method="post" name="myform">
-        <label>User Name :</label>
-        <input type="text" name="username" id="username"/>
-        <label>Password :</label>
-        <input type="password" name="password" id="password"/>
-        <input type="button" value="Login" id="submit" onclick="validate()"/>
+    <div class="box">
+		<div class="form">
+			<h1>Login</h1>
+			<form action="/login" method="post">
+				<div class="inputBox">
+				<input type="text" name="username"  id="username" required>
+		        <span>Username</span>
+				<i></i>
+				</div>
+				<div class="inputBox">
+				<input type="password" name="password"  id="password" required>
+				<span>Password</span>
+				<i></i>
+			    </div>
+				<div class="link">
+				<p> <%= notice %></p>
+			    </div>
+				<input type="submit" value="Login">
+		
+			</form>
+		</div>
+	</div>
   </body>
 </html>
